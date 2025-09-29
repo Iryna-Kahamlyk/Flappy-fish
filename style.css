@@ -1,0 +1,85 @@
+/*
+this file works the following way:
+1. first part with * resets default styles for all elements
+2. covers the whole screen with a background image (vh and vw are viewpoint height and width that are relative to the browser size (so 100vh/vw = 100%)
+3. adds fish picture with fixed position, certain position on the screen (scalable), and on top of other elements (z-index controls stacking order)
+4. has some default settings for pipes (obstacles) even though some of them are not necessary as js does it anyways
+5. centers the message on the screen
+6. some message styling added
+7. displays score
+8. closing button
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.background {
+    height: 100vh;
+    width: 100vw;
+    background: url('images/background.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.fish {
+    height: 80px;
+    width: 90px;
+    position: fixed;
+    top: 40vh;
+    left: 30vw;
+    z-index: 100;
+}
+
+.pipe_sprite {
+    position: fixed;
+    top: 40vh;
+    left: 100vw;
+    height: 70vh;
+    width: 6vw;
+    background: radial-gradient(lightblue 50%, blue);
+    border: 5px solid black;
+}
+
+.message {
+    position: absolute;
+    z-index: 10;
+    color: rgb(0, 0, 0);
+    top: 40%;
+    left: 50%;
+    font-size: 2em;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.messageStyle {
+    background: white;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5%;
+}
+
+.score {
+    position: fixed;
+    z-index: 10;
+    height: 7vh;
+    font-size: 7vh;
+    font-weight: 70;
+    color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.score_val {
+    color: gold;
+    font-weight: bold;
+}

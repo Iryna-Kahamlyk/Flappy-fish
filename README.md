@@ -1,0 +1,3 @@
+## Flappy Fish
+
+This project is a 2D side-scrolling browser game inspired by *Flappy Bird*, where players navigate through obstacles using gravity-based movement while aiming for a high score. The game mechanics are implemented in JavaScript, including collision detection, real-time obstacle generation, and responsive keyboard controls, while HTML and CSS are used to create smooth animations and a clean, interactive interface.
